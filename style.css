@@ -9,10 +9,25 @@
 
 body {
     font-family: sans-serif;
+    flex-direction: row;
 }
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    display: flex;
+    background-color: #f2796e;
+    width: 55%;
+    min-height: 100vh;
+    padding: 10px 20px;
+}
+
 /* styling form  */
 form {
-    max-width: 400px;
+    max-width: 45%;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
     padding: 50px;
 
@@ -47,6 +62,36 @@ form div {
 input:focus{
     border: 2px solid #f2796e;
 }
+
+/* styling social icons */
+
+span{
+    color: #f2796e;
+    cursor: pointer;
+    font-size: 15px;
+}
+.or {
+    text-align: center;
+}
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.btn-1, .btn-2{
+    width: 100%;
+    padding: 10px 5px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #c4c4c4;
+    border-radius: 8px;
+    box-shadow: 2px, 2px, 4px rgba(99, 32, 32, 0.1);
+}
+
 /* styling form icons */
 
 form div i{
@@ -91,3 +136,12 @@ button:hover {
     opacity: 0.8;
 }
 /* media queries */
+
+@media(max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+    form{
+        width: 100% !important;
+    }
+}
